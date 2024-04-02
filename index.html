@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="utf-8" />
+    <title>Interlinked Software Solutions</title>
+    <style>
+
+        body {
+            --interlinked-green: #185C37; /* Excel Green */
+            --interlinked-white: #dfd3c5; /* Off-white */
+            --interlinked-cream: #F1ECE6; /* Cream */
+            --interlinked-black: #0D0A0B; /* Soft Black */
+            margin:0;
+            width: 100%;
+            background-color: var(--interlinked-cream);
+            color: var(--interlinked-green);
+            font-family: Tahoma;
+        }
+
+        .alternate {
+            background-color: var(--interlinked-cream);
+            color: var(--interlinked-green);
+        }
+
+        #bar {
+            margin:0;
+            height: 56px;
+            position: fixed;
+            top:0px;
+            left: 0px;
+            width: 100%;
+            z-index: 2;
+            box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11);
+            background-color: var(--interlinked-cream);
+        }
+
+        #logo {
+            width: 22px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        #header {
+            position: relative;
+            height: 800px;
+            width: 100%;
+            margin:0;
+            padding: 0;
+        }
+        #about {
+            position: relative;
+            height: auto;
+            width: 100%;
+            margin:0;
+            padding: 0;
+        }
+        #solutions {
+            position: relative;
+            height: fit-content;
+            overflow: auto;
+            width: 100%;
+            margin:0;
+            padding: 0;
+        }
+        #contact {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            margin:0;
+            padding: 0;
+        }
+
+        #navlist {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            float: right;
+            margin-right: 10%;
+            position: relative;
+        }
+
+        .nav {
+            display: inline-block;
+            padding: 15.3px 10px 12px;
+            margin: 0;
+            font-size:24px;
+            cursor:pointer;
+        }
+
+        #homeNav{
+            display: inline-block;
+            margin-left:5%;
+            margin-top:5px;
+            cursor:pointer;
+        }
+
+        h1 {
+            display: inline-block;
+            font-size:30px;
+            margin: 0;
+            margin-top:4px;
+            font-weight: 200;
+        }
+
+        .subtitle1 {
+            position:relative;
+            top:10px;
+            left:5%;
+            font-size:30px;
+            font-weight: 200;
+            width: fit-content;
+            margin-right: 0px;
+            margin-top:0px;
+            margin-bottom:20px;
+        }
+
+        #splashTextHolder {
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            bottom:300px;
+            text-align: center;
+        }
+
+        #splash {
+            display: inline-block;
+            padding: 10px;
+            border: 6px solid var(--interlinked-green);;
+            font-weight:200;
+            font-size:48px;
+            
+            background-color: var(--interlinked-cream);
+        }
+
+        #headerPanel {
+            height: 744px;
+            position: relative;
+            width: 100%;
+            left: 0px;
+            top:56px;
+        }
+
+        .textSection {
+            position: relative;
+            left: 10%;
+            width: 80%;
+            font-size:22px;
+            line-height: 1.6;
+            padding-bottom: 30px;
+            margin-right: 0px;
+        }
+
+        .sectionImage {
+            position: relative;
+            left: 10%;
+            width: 80%;
+            margin-bottom: 30px;
+        }
+
+        .mail {
+            color: var(--interlinked-green);
+            position: relative;
+            top: -5px;
+            font-size:24px;
+            display: inline-block;
+            margin: 10px 5px;
+            /* text-decoration: underline; */
+        }
+        
+        .fa {
+            font-size: 34px;
+            display: inline-block;
+            color: var(--interlinked-green);
+        }
+
+        #mailContainer {
+            position: relative;
+            left: 10%;
+            width: fit-content;
+        }
+
+        .envelope:hover{
+            color: black;
+            font-size:40px;
+        }
+
+        .subLineStyle {
+            width: 80%;
+            overflow: visible; /* For IE */
+            padding: 0;
+            border: none;
+            border-top: medium double var(--interlinked-green);
+            color: var(--interlinked-green);
+            text-align: center;
+            height: 0px;
+        }
+
+        .lineStyle {
+            width: 90%;
+            overflow: visible; /* For IE */
+            padding: 0;
+            border: none;
+            border-top: thick double var(--interlinked-green);
+            color: var(--interlinked-green);
+            text-align: center;
+            height: 0px;
+        }
+        .lineStyle:after {
+            content: "⚭";
+            display: inline-block;
+            position: relative;
+            top: -.86em;
+            font-size: 2em;
+            padding: 0 0.25em;
+            background-color: var(--interlinked-cream);
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="header">
+        <svg id="headerPanel"></svg>
+        
+        <div id="splashTextHolder">
+           <h3 id="splash">Environmental Reporting Made Easy</h3>
+	    </div>
+    </div>
+    <div id="solutions">
+        <hr class="lineStyle">
+        <h3 class="subtitle1">Solutions</h3>
+        <div class="textSection">
+            From lab results to reports in seconds, our software removes the need for any manual data entry and formatting.
+            Our application accepts a wide range of environmental assessment lab data, which it then uses to generate your specified report format, saving hours of time compared to human data entry.
+        </div>
+        <img class="sectionImage" src="computer.jpg" alt="Crop faceless woman using laptop at desk in light office">
+    </div>
+    <div id="about" class="alternate">
+        <hr class="lineStyle">
+        <h3 class="subtitle1">About</h3>
+        <div class="textSection">
+            Interlinked is a environmental data management company. Our mission is to make environmental reporting accessible and easy for everyone.
+        </div>
+        <img class="sectionImage" src="yukon_hike.jpg" alt="Cloud covered mountain beside a lake and trees">
+        <hr class="subLineStyle" />
+        <div class="textSection">
+            At Interlinked, we are an interdisciplinary team of environmental biologists and computer scientists.
+            Our expertise in these areas go hand in hand to provide powerful environmental data management tools at your fingertips.
+        </div>
+        <img class="sectionImage" src="jacob_river_2.jpg" alt="A man walking towards a river">
+    </div>
+    <div id="contact" class="alternate">
+        <hr class="lineStyle">
+        <h3 class="subtitle1">Contact</h3>
+        <div class="textSection">
+            To book a demo, discuss pricing, or anything else, please contact us at the following email.
+        </div>
+        <div id="mailContainer">
+                <a href="mailto: colbyparsons88@gmail.com"><i class="fa fa-envelope"></i></a>
+                <a href="mailto: colbyparsons88@gmail.com"><p class="mail">INSERT-EMAIL@gmail.com</p></a>
+        </div>
+    </div>
+    <div id="bar">
+        <div id="homeNav">
+        <span>
+        <svg id="logo" viewbox="90 50 70 140">
+            <!-- Top tree -->
+            <path d="M 103.75 100.0 C 99.75 100.0 97.38 96.6 99.5 93.2 L 120.75 59.2 C 122.88 55.8 127.12 55.8 129.25 59.2 L 150.5 93.2 C 152.62 96.6 150.24 100.0 146.25 100.0 L 140.3 100.0 M 132.65 100.0 L 103.75 100.0" stroke-width="3" style="stroke:#185C37;fill:none"/>
+            <path d="M 112.25 94.34 C 109.85 94.34 108.42 92.3 109.7 90.26 L 122.45 69.86 C 123.72 67.82 126.27 67.82 127.55 69.86 L 140.3 90.26 C 141.58 92.3 140.15 94.34 137.75 94.34 L 136.5 94.34 M 128.66 94.34 L 112.25 94.34" stroke-width="2" style="stroke:#185C37;fill:none"/>
+            
+            <!-- Top tree fill -->
+            <path d="M 116.7 79.06 L 122.45 69.86 C 123.72 67.82 126.27 67.82 127.55 69.86 L 133.3 79.06 z" stroke-width="1" style="stroke:#185C37;fill:#185C37"/>
+            <path d="M 110.2 93.26 L 122.95 72.86 " stroke-width="4" style="stroke:#185C37;fill:none"/>
+            <path d="M 126.95 72.86 L 139.8 93.26 " stroke-width="4" style="stroke:#185C37;fill:none"/>
+
+            <!-- Middle tree -->
+            <path d="M 102.5 125.0 C 98.27 125.0 95.75 121.4 98.0 117.8 L 109.3 99.9 M 112.8 94.12 L 120.5 81.8 C 122.75 78.2 127.25 78.2 129.5 81.8 L 152.0 117.8 C 154.25 121.4 151.73 125.0 147.5 125.0 L 141.2 125.0 M 133.1 125.0 L 102.5 125.0" stroke-width="3" style="stroke:#185C37;fill:none"/>
+            <path d="M 111.5 118.56 C 108.96 118.56 107.45 116.4 108.8 114.24 L 117.4 100.48 M 121.4 94.08 L 122.3 92.64 C 123.65 90.48 126.35 90.48 127.7 92.64 L 141.2 114.24 C 142.55 116.4 141.04 118.56 138.5 118.56 L 137 118.56 M 128.87 118.56 L 111.5 118.56" stroke-width="3" style="stroke:#185C37;fill:none"/>
+        
+            <!-- Middle tree fill -->
+            <path d="M 121.4 94.08 L 122.3 92.64 C 123.65 90.48 126.35 90.48 127.7 92.64 L 128.8 94.24 z" stroke-width="0" style="stroke:#185C37;fill:#185C37"/>
+            <path d="M 109.8 117.24 L 120.5 101.08 " stroke-width="4" style="stroke:#185C37;fill:none"/>
+            <path d="M 129.7 100.44 L 140.2 117.24" stroke-width="4" style="stroke:#185C37;fill:none"/>
+            <path d="M 129.7 101.44 L 120.5 101.08" stroke-width="3" style="stroke:#185C37;fill:none"/>
+
+
+            <!-- Bottom tree -->
+            <path d="M 100.0 154.0 C 95.3 154.0 92.5 150.0 95.0 146.0 L 108.0 125.4 M 112.0 118.8 L 120.0 106.0 C 122.5 102.0 127.5 102.0 130.0 106.0 L 155.0 146.0 C 157.5 150.0 154.7 154.0 150.0 154.0 L 136 154 M 128 154 L 100.0 154.0" stroke-width="3" style="stroke:#185C37;fill:none"/>
+            <path d="M 110.0 146.0 C 107.18 146.0 105.5 143.6 107.0 141.2 L 117 125.2 M 121.0 118.8 L 122.0 117.2 C 123.5 114.8 126.5 114.8 128.0 117.2 L 143.0 141.2 C 144.5 143.6 142.82 146.0 140.0 146.0 L 136.6 146 M 127.5 146 L 110.0 146.0" stroke-width="3" style="stroke:#185C37;fill:none"/>
+            
+            <!-- Bottom tree fill -->
+            <path d="M 121.0 118.8 L 122.0 117.2 C 123.5 114.8 126.5 114.8 128.0 117.2 L 129.0 118.8 z" stroke-width="0" style="stroke:#185C37;fill:#185C37"/>
+            <path d="M 134.0 126.8 L 143.0 141.2 C 144.5 143.6 142.82 146.0 140.0 146.0 L 136.6 146 z" stroke-width="1" style="stroke:#185C37;fill:#185C37"/>
+            <path d="M 113.5 146 L 110.0 146.0 C 107.18 146.0 105.5 143.6 107.0 141.2 L 117 125.2 z" stroke-width="1" style="stroke:#185C37;fill:#185C37"/>
+            <path d="M 112.0 134.6 L 117 125.2 L 134.0 126.8 L 138.0 134.6 z" stroke-width="1" style="stroke:#185C37;fill:#185C37"/>
+
+            <!-- Tree Stump -->
+            <path d="M 114.44 140.63 C 114.44 137.0 117.1 134.58 121.09 134.58 L 129.08 134.58 C 133.07 134.58 135.74 137.0 135.74 140.63 L 135.74 176.93 C 135.74 180.56 133.07 182.98 129.08 182.98 L 121.09 182.98 C 117.1 182.98 114.44 180.56 114.44 176.93 L 114.44 154 M 114.44 146 L 114.44 140.63"  style="stroke-width:3;stroke:#185C37;fill:none"/>
+            <path d="M 121.89 146.59 C 121.89 144.08 122.69 142.41 123.89 142.41 L 126.29 142.41 C 127.48 142.41 128.28 144.08 128.28 146.59 L 128.28 171.71 C 128.28 174.22 127.48 175.9 126.29 175.9 L 123.89 175.9 C 122.69 175.9 121.89 174.22 121.89 171.71 L 121.89 154 M 121.89 146 L 121.89 146.59"  style="stroke-width:3;stroke:#185C37;fill:none"/>
+            
+            <!-- Tree Stump Fill -->
+            <path d="M 121.89 146 L 121.89 146.59 C 121.89 144.08 122.69 142.41 123.89 142.41 L 126.29 142.41 C 127.48 142.41 128.28 144.08 128.28 146.59 L 128.28 146 z"  style="stroke-width:0;stroke:#185C37;fill:#185C37"/>
+            <path d="M 128.28 154 L 128.28 171.71 C 128.28 174.22 127.48 175.9 126.29 175.9 L 123.89 175.9 C 122.69 175.9 121.89 174.22 121.89 171.71 L 121.89 154 z"  style="stroke-width:0;stroke:#185C37;fill:#185C37"/>
+        </svg>
+        </span>
+        <h1>Interlinked</h1>
+        </div>
+        <ul id="navlist">
+            <li id="aboutNav" class="nav">About</li>
+            <li id="solNav" class="nav">Solutions</li>
+            <li id="cnav" class="nav">Contact</li>
+        </ul>
+    </div>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script>
+
+    d3.select("#homeNav")
+      .on("click",function(){
+        window.scrollBy({ 
+          top: d3.select("#header").node().getBoundingClientRect().y - 50,
+          left: 0,
+          behavior: 'smooth' 
+        });
+      });
+
+    d3.select("#aboutNav")
+      .on("click",function(){
+        window.scrollBy({ 
+          top: d3.select("#about").node().getBoundingClientRect().y - 50,
+          left: 0, 
+          behavior: 'smooth' 
+        });
+      });
+
+    d3.select("#solNav")
+      .on("click",function(){
+        window.scrollBy({ 
+          top: d3.select("#solutions").node().getBoundingClientRect().y - 50,
+          left: 0, 
+          behavior: 'smooth' 
+        });
+      });
+
+    d3.select("#cnav")
+      .on("click",function(){
+        window.scrollBy({ 
+          top: d3.select("#contact").node().getBoundingClientRect().y - 50,
+          left: 0, 
+          behavior: 'smooth' 
+        });
+      })
+
+    var title = d3.select("h1");
+
+    var data = [];
+
+    var margin = {"left":0,
+                "right":0,
+                "top":0,
+                "bottom":0};
+
+    var body = d3.select("body");
+    var svg = body.select("#headerPanel");
+    var width = svg.node().getBoundingClientRect().width;
+    var height = 738;
+    var speed = 1;
+    var radius = 3;
+    var threshold = Math.pow(100,2);
+
+    var numStartPoints = 6;
+    var maxPoints = 20;
+
+    if(width < 600){
+        numStartPoints = 5;
+        maxPoints = 10;
+    }
+
+    
+    var boxHeight = 32;
+    var bounds = 30;
+    var maxWidth = width;
+    var filledRows = []
+    var filledCols = []
+
+    for ( i = 0; i <= Math.ceil(height / boxHeight); i++ ) {
+        filledRows[i] = Array(width).fill(0);
+    }
+
+    for ( i = 0; i <= Math.ceil(width / (boxHeight * 2)); i++ ) {
+        filledCols[i] = Array(height).fill(0);
+    }
+
+    for(i = 0; i < numStartPoints; i++){
+        let dir = Math.random() > 0.5 ? 1 : -1;
+        let x = dir == 1 ? 2 : width - 2; //Math.floor(Math.random()*(width - 2*radius)+radius);
+        let y = Math.floor((Math.random()*(height - 4*radius)+ 2 * radius + boxHeight)/boxHeight) * boxHeight;
+        let dx = dir == 1 ? speed : -speed;
+        let dy = 0;
+        let obj = {"x":x,"y":y,"dir":dir,"dx":dx,"dy":dy};
+        data.push(obj)
+    }
+
+    var circles = svg.append("g")
+                     .attr("fill","#185C37")
+                     .selectAll("circle")
+                     .data(data)
+                     .enter().append("circle")
+                     .attr("cx", d => d.x)
+                     .attr("cy", d => d.y)
+                     .attr("r",radius);
+
+    
+    var lineGroup = svg.append("g");
+
+    const sleep = (milliseconds) => {
+        return new Promise(resolve => setTimeout(resolve, milliseconds))
+    }
+
+    async function loop(timestamp) {
+        var dt = new Date();
+        var startTime = dt.getTime();
+        if (Math.random() > 0.99 && data.length < maxPoints) {
+            let dir = Math.random() > 0.5 ? 1 : -1;
+            let x = dir == 1 ? 2 : width - 2; //Math.floor(Math.random()*(width - 2*radius)+radius);
+            let y = Math.floor((Math.random()*(height - 4*radius)+ 2 * radius + boxHeight)/boxHeight) * boxHeight;
+            let dx = dir == 1 ? speed : -speed;
+            let dy = 0;
+            let obj = {"x":x,"y":y,"dir":dir,"dx":dx,"dy":dy};
+            data.push(obj)
+        }
+        for(i = data.length - 1; i >= 0; i--){
+            var point = data[i];
+            if(point.x + point.dx + radius > width + bounds || point.x + point.dx - radius < -bounds){
+                point.dx = -point.dx;
+                point.dir = -point.dir;
+                point.y = Math.floor((Math.random()*(height - 4*radius)+ 2 * radius + boxHeight)/boxHeight) * boxHeight;
+            }
+            if(point.y + point.dy + radius > height || point.y + point.dy - radius < 0){
+                point.dy = -point.dy;
+            }
+            if ( point.x % (2 * boxHeight) == 0 && point.dx != 0 && Math.random() > 0.8 ) {
+                point.dy = Math.random() > 0.5 ? point.dx : -point.dx;
+                point.dx = 0;
+            } else if ( point.y % boxHeight == 0 && point.dy != 0 && Math.random() > 0.5 ) {
+                point.dx = Math.abs(point.dy)*point.dir;
+                point.dy = 0;
+            }
+            point.y += point.dy;
+            point.x += point.dx;
+        }
+        let filtered = data.filter(function (a) {
+            return a.dx != 0 && filledRows[Math.floor(a.y / boxHeight)][a.x] != 1 || a.dy != 0 && filledCols[Math.floor(a.x / (boxHeight * 2))][a.y] != 1;
+        });
+        circles = svg.append("g")
+                     .attr("fill","#185C37")
+                     .selectAll("circle")
+                     .data(filtered)
+                     .enter().append("circle")
+                     .attr("cx", d => d.x)
+                     .attr("cy", d => d.y)
+                     .attr("r",radius);
+
+        filtered.forEach(a => {
+            if (a.dx != 0) filledRows[Math.floor(a.y / boxHeight)][a.x] = 1;
+            else filledCols[Math.floor(a.x / (boxHeight * 2))][a.y]  = 1
+        });
+        
+        
+        circles.attr("cx",d => d.x)
+               .attr("cy", d => d.y);
+
+
+        lineGroup.selectAll("line")
+                 .remove();
+
+        var et = new Date();
+        var endTime = et.getTime();
+
+        if(et - dt < 16){
+            await sleep(16 - (et- dt));
+        }
+
+
+        window.requestAnimationFrame(loop)
+    }
+
+    function redraw(){
+        width = svg.node().getBoundingClientRect().width;
+        for(i = 0; i < data.length; i++){
+            if(data[i].x > width){
+                data[i].x = width-3;
+            }
+        }
+        if (width > maxWidth) {
+            for ( i = 0; i <= Math.ceil(height / boxHeight); i++ ) {
+                for ( j = maxWidth; j < width; j++ )
+                filledRows[i][j] = 0;
+            }
+            for ( i = Math.ceil(maxWidth / (boxHeight * 2)); i <= Math.ceil(width / (boxHeight * 2)); i++ ) {
+                filledCols[i] = Array(height).fill(0);
+            }
+            maxWidth = width;
+        }
+        if(width < 750){
+            title.style("display","none");
+        }else{
+            title.style("display","inline-block");
+        }
+    }
+
+    window.addEventListener("resize", redraw);
+
+    window.requestAnimationFrame(loop)
+    
+</script>
+
+</body>
+</html>
